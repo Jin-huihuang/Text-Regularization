@@ -9,8 +9,9 @@ swa_plane_results/
 features/
 perturb_results/
 *.pdf
-*.sh
+run_*.sh
 *.ipynb
 nohup.out
 .vscode
 datasets
+data

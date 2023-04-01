@@ -65,6 +65,7 @@ def main():
                     data = data.to(device)
                     if isinstance(net.network, CLIP):
                         features = net.network.encode_image(data)
+                        # features = features / features.norm(dim=1, keepdim=True)
                     else:
                         features = net(data)
                     if isinstance(model, Contrast) and not isinstance(net.network, CLIP):
