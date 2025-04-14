@@ -5,18 +5,25 @@ Domain generalization (DG) aims to transfer the knowledge learned in the source 
 <p align="center">
     <img src="./assets/method.png" width="90%" />
 </p>
+This repository contains an official implementation for the PRCV paper [*Learning Domain-invariant Representations from Text for Domain Generalization*](https://link.springer.com/chapter/10.1007/978-981-99-8543-2_10)
+
+## 🔗 Built Upon
+
+This project is built upon:
+
+- [DomainBed@3fe9d7](https://github.com/facebookresearch/DomainBed/tree/3fe9d7bb4bc14777a42b3a9be8dd887e709ec414)
+- [SWAD](https://github.com/khanrc/swad)
 
 ---
 
-Note that this project is built upon [DomainBed@3fe9d7](https://github.com/facebookresearch/DomainBed/tree/3fe9d7bb4bc14777a42b3a9be8dd887e709ec414) and [SWAD](https://github.com/khanrc/swad).
+## ⚙️ Setup
 
+### 🧩 Dependencies
 
-## Preparation
+Install required packages:
 
-### Dependencies
-
-```sh
-pip install -r requirements.txt
+```bash
+pip install -r requirements.txt```
 ```
 
 ### Datasets
@@ -39,7 +46,7 @@ NumPy: 1.21.5
 PIL: 9.0.1
 ```
 
-## How to Run
+## 🚀 How to Run
 
 `train_all.py` script conducts multiple leave-one-out cross-validations for all target domain.
 
@@ -85,4 +92,19 @@ CUDA_VISIBLE_DEVICES=0 python train_all.py TR0 --dataset TerraIncognita --determ
 CUDA_VISIBLE_DEVICES=0 python train_all.py DomainNet --dataset DomainNet --deterministic \
 --trial_seed 0 --checkpoint_freq 1000 --steps 15001 --data_dir $data_dir --algorithm Contrast \
 --contrast_w 0.1 --lr 5e-5
+```
+
+### 📚 Citation
+
+If you find this repository useful, please consider citing the GSFP paper:
+
+```
+@inproceedings{zhang2023learning,
+  title={Learning domain-invariant representations from text for domain generalization},
+  author={Zhang, Huihuang and Hu, Haigen and Chen, Qi and Zhou, Qianwei and Jiang, Mingfeng},
+  booktitle={Chinese Conference on Pattern Recognition and Computer Vision (PRCV)},
+  pages={118--129},
+  year={2023},
+  organization={Springer}
+}
 ```
