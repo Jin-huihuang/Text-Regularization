@@ -5,7 +5,9 @@ Domain generalization (DG) aims to transfer the knowledge learned in the source 
 <p align="center">
     <img src="./assets/method.png" width="90%" />
 </p>
+
 This repository contains an official implementation for the PRCV paper [*Learning Domain-invariant Representations from Text for Domain Generalization*](https://link.springer.com/chapter/10.1007/978-981-99-8543-2_10)
+
 
 ## 🔗 Built Upon
 
